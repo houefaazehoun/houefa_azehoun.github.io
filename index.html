@@ -14,9 +14,30 @@
   a {
     color: #d63384;
   }
+  /* HEADER AVEC IMAGE */
+  .hero {
+    background-image: url("ma_photo.jpg"); /* TON IMAGE */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  /* Overlay sombre pour lisibilité */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Contenu au-dessus de l'image */
+  .hero .container {
+    position: relative;
+    z-index: 1;
+  }
 </style>
 
-<header class="bg-primary bg-gradient text-white py-5">
+<header class="hero text-white py-5">
   <div class="container">
     <div class="row">
       <div class="col-md-3 text-left text-md-center mb-3">
